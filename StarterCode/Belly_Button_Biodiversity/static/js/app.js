@@ -1,11 +1,26 @@
 function buildMetadata(sample) {
-
+  var metaURL = `metadata/${sample}`;
+  console.log(metaURL);
   // @TODO: Complete the following function that builds the metadata panel
   // Plot the default route once the page loads
-
+  d3.json(metaURL).then(function(sample_metadata) {
+      console.log(sample_metadata);
+      let metaData = d3.select('#sample-metadata');
+      metaData.html(" ");
+      Object.entries(sample_metadata).forEach(([key, value]) => {
+        // Log the key and value
+        console.log(`Key: ${key} and Value ${value}`);
+        var row = metaData.append("tr");
+        row.append("td").text(`${key}: ${value}`);
+    
+      
+    
+    });
+    
+  });
   // Use `d3.json` to fetch the metadata for a sample
     // Use d3 to select the panel with id of `#sample-metadata`
-
+  
     // Use `.html("") to clear any existing metadata
 
     // Use `Object.entries` to add each key and value pair to the panel
