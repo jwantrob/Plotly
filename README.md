@@ -1,7 +1,6 @@
 # Plotly
 Plotly Dashboard hosted on Heroku
 
-![biodiversity](Images/bacteria_by_filterforgedotcom.jpeg)
 
 This project explores the biodiversity found in microbes living in the belly button.  
 Data was extracted from SQLlite databases and posted on a Flask API.
